@@ -260,6 +260,10 @@ body {
   padding: 5rem 0;
 }
 
+#recent {
+  padding-top: 7rem;
+}
+
 .section-alt {
   background: white;
 }
@@ -387,6 +391,52 @@ body {
 .tag:hover {
   background: linear-gradient(135deg, #c0392b, #a93226);
   transform: scale(1.05);
+}
+
+.recent-tag {
+  background: linear-gradient(135deg, #27ae60, #229954) !important;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.recent-card {
+  position: relative;
+  border: 2px solid #e74c3c;
+}
+
+.recent-card::before {
+  content: 'NOUVEAU';
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: #e74c3c;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 15px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  transform: rotate(15deg);
+  z-index: 10;
+}
+
+.article-date {
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 0.5rem;
+  font-style: italic;
 }
 
 /* Tags Section */
